@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { PageHero, Container } from "@/components/ui";
+import { projects } from "@/data/projects";
+export const metadata = { title: "Portfolio" };
+export default function PortfolioPage(){ return <><PageHero eyebrow="Portfolio" title="Work that shows how we think." description="Concept and demo projects are labeled clearly. As the agency grows, genuine client work can replace or sit alongside them."/><section className="py-24"><Container><div className="grid gap-5 md:grid-cols-2">{projects.map(p=><Link key={p.slug} href={`/portfolio/${p.slug}`} className="rounded-3xl border border-white/8 bg-white/[.025] p-7 transition hover:border-indigo-400/25"><span className="rounded-full bg-indigo-400/10 px-3 py-1 text-xs text-indigo-200">{p.label}</span><p className="mt-5 text-sm text-zinc-600">{p.industry}</p><h2 className="mt-2 text-2xl font-semibold">{p.name}</h2><p className="mt-4 leading-7 text-zinc-500">{p.solution}</p><div className="mt-6 flex flex-wrap gap-2">{p.technologies.map(t=><span key={t} className="rounded-md border border-white/7 px-2 py-1 text-xs text-zinc-600">{t}</span>)}</div><div className="mt-7 flex items-center gap-2 text-sm">View Case Study <ArrowRight size={15}/></div></Link>)}</div></Container></section></> }

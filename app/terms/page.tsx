@@ -1,0 +1,3 @@
+import { PageHero, Container } from "@/components/ui";
+export const metadata = { title: "Terms" };
+export default function Terms(){ return <><PageHero eyebrow="Legal" title="Terms & Conditions" description="Placeholder legal page to be reviewed and finalized before public launch."/><Container className="py-20"><div className="max-w-3xl space-y-6 text-sm leading-7 text-zinc-400"><p>This page intentionally avoids inventing legal terms for a business whose final entity and operating details have not yet been confirmed.</p><p>Replace this content with professionally reviewed terms before accepting commercial engagements through the public website.</p></div></Container></> }
