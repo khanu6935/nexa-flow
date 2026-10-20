@@ -1,0 +1,18 @@
+# Dependencies
+/node_modules/
+
+# Next.js build
+/.next/
+/out/
+
+# Production output
+/build/
+
+# Environment variables
+.env*.local
+
+# Docker/local generated files
+*.log
+
+# macOS
+.DS_Store
